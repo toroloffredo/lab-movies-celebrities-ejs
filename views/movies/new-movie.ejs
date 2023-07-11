@@ -1,0 +1,28 @@
+<h2>Add a New Movie</h2>
+
+<form type="POST" action="/movie/create">
+    <label>Movie Name: 
+        <input name ='title' type="text"/> 
+    </label>
+    <label>Genre: 
+        <input name ='genre' type="text"/> 
+    </label>
+    <label>plot: 
+        <input name ='plot' type="text"/> 
+    </label>
+    <label for="cast">cast: 
+        <select name ='cast' id="cast" multiple> 
+            <% results.forEach ((cast) => {%>
+                <option value="<%cast>"><%-movie.cast%> <option/>
+            <%} )%>
+
+
+
+
+
+    </label>
+
+
+
+    <button type="submit">Submit!</button>
+</form>
